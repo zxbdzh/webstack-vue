@@ -12,7 +12,7 @@
 
 ## 使用教程
 
-1. 自行部署api：xxxx
+1. 自行部署api：[webstack-backend](https://github.com/zxbdzh/webstack-backend)
 2. clone项目
 ```bash
 git clone https://github.com/zxbdzh/webstack-vue.git
