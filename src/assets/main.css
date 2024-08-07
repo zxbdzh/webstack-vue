@@ -1,0 +1,31 @@
+@import './base.css';
+
+:root:root {
+
+}
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5vh; /* 设置卡片之间的间隔 */
+    padding: 1vh; /* 容器内边距 */
+    .card {
+        width: calc(33.333% - 1vh); /* 三列布局，减去间隔 */
+        border-radius: 8px; /* 圆角边框 */
+        overflow: hidden; /* 隐藏超出边界的内容 */
+    }
+}
+.card-container-mobile {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1vh; /* 设置卡片之间的间隔 */
+    .card {
+        font-size: 1.5vh;
+        width: calc(50% - 1vh); /* 二列布局，减去间隔 */
+        height: calc(50% - .5vh);
+        border-radius: 8px; /* 圆角边框 */
+        overflow: hidden; /* 隐藏超出边界的内容 */
+        .el-button {
+            font-size: 1vh;
+        }
+    }
+}
