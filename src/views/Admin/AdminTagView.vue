@@ -223,7 +223,7 @@ const handleAddDialogClose = (status) => {
       </template>
     </el-table-column>
 
-    <el-table-column prop="createTime" label="上次更新时间" sortable width="180">
+    <el-table-column prop="updateTime" label="上次更新时间" sortable width="180">
       <template #default="{ row }">
         <el-text>{{ DateFormat(row.updateTime) }}</el-text>
       </template>

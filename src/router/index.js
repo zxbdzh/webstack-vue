@@ -25,6 +25,11 @@ const router = createRouter({
           component: () => import('../views/Admin/AdminCategoryView.vue')
         },
         {
+          path: 'users',
+          name: 'users',
+          component: () => import('../views/Admin/AdminUserView.vue')
+        },
+        {
           path: 'bookmark',
           name: 'bookmark',
           component: () => import('../views/Admin/AdminBookMarkView.vue')

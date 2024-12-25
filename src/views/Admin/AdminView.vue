@@ -35,7 +35,10 @@ onMounted(() => {
       <el-container>
         <el-aside :width="isMobileWidth ? '64px' : myWidth" v-if="!isMobileWidth">
           <el-scrollbar :style="`position: fixed; width: ${myWidth === '60px' ? '5%' : '15%'} `">
-            <AdminSideBar :isMobileWidth @update-collapse="CollapseChange"></AdminSideBar>
+            <AdminSideBar
+              :isMobileWidth="isMobileWidth"
+              @update-collapse="CollapseChange"
+            ></AdminSideBar>
           </el-scrollbar>
         </el-aside>
         <el-container>
