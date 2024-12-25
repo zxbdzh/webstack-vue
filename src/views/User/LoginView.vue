@@ -23,6 +23,7 @@ const login = async () => {
   try {
     userStore.token = (await request.post('/user/login', formData)).data.data
     userStore.username = username.value
+    userStore.Avatar = (await request.get('/user/userInfo')).data.data.avatar
   } finally {
     loading.value = false
   }
