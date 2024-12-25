@@ -39,14 +39,20 @@ const clickCollapse = () => {
         <template #title>分类管理</template>
       </el-menu-item>
     </router-link>
-    <router-link to="/admin/bookmark">
+    <router-link to="/admin/users">
       <el-menu-item index="1-3">
+        <el-icon><UserFilled /></el-icon>
+        <template #title>用户管理</template>
+      </el-menu-item>
+    </router-link>
+    <router-link to="/admin/bookmark">
+      <el-menu-item index="1-4">
         <el-icon><ChromeFilled /></el-icon>
         <template #title>书签导入导出</template>
       </el-menu-item>
     </router-link>
     <router-link to="/">
-      <el-menu-item index="1-4">
+      <el-menu-item index="1-5">
         <el-icon><HomeFilled /></el-icon>
         <template #title>主页</template>
       </el-menu-item>
