@@ -1,178 +1,236 @@
 # webstack-vue
 
-使用vue3 + vite 构建的webstack项目，原项目：https://github.com/WebStackPage/WebStackPage.github.io
+> 使用 Vue 3 + Vite 构建的现代化网址导航系统
+>
+> 原项目灵感来源:[WebStackPage](https://github.com/WebStackPage/WebStackPage.github.io)
 
-## 📖 介绍
+[![Vue](https://img.shields.io/badge/Vue-3.x-4FC08D?logo=vue.js&logoColor=white)](https://vuejs.org/)
+[![Vite](https://img.shields.io/badge/Vite-5.x-646CFF?logo=vite&logoColor=white)](https://vitejs.dev/)
+[![Element Plus](https://img.shields.io/badge/Element_Plus-2.x-409EFF?logo=element&logoColor=white)](https://element-plus.org/)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-根据原项目制作的网页导航，特点如下：
-- 🌟 现代化界面：基于 Vue 3 + Element Plus 构建的现代化UI
-- 📱 响应式设计：完美适配桌面端和移动端
-- 🔖 书签管理：支持浏览器书签导入导出功能
-- 📂 分类系统：书签进行分类管理，支持多级分类
-- 🛠️ 后台系统：完整的管理员后台，支持标签、分类、用户管理
-- 👥 用户系统：用户登录注册功能（持续完善中）
-- 🎨 主题切换：支持暗黑模式和亮色模式切换
-- 📖 用户引导：新用户首次使用引导功能
+---
+
+## 📖 项目介绍
+
+webstack-vue 是一个基于 Vue 3 生态构建的网址导航/书签管理系统,提供书签收藏、分类管理、用户系统以及完整的后台管理功能。前端采用现代化技术栈,后端通过独立 API 服务对接,可用于个人书签云端管理或团队站点导航中心。
+
+### ✨ 核心特性
+
+- 🌟 **现代化界面** —— Vue 3 + Element Plus,简洁优雅
+- 📱 **响应式布局** —— 桌面端、平板、移动端自适应
+- 🌙 **主题切换** —— 一键切换亮色 / 暗黑模式
+- 🔖 **书签导入导出** —— 兼容 Chrome / Edge / Firefox / 360 浏览器
+- 📂 **多级分类** —— 支持父子级分类组织
+- 🛠️ **完整后台** —— 标签、分类、用户、书签四大模块
+- 👥 **用户体系** —— 注册、登录、密码修改、权限区分
+- 📖 **新手引导** —— 基于 Driver.js 的首次使用引导
+
+---
+
+## 🖼️ 界面预览
+
+### 首页导航(亮色模式)
+
+清爽的卡片式书签陈列,左侧分类导航一目了然。
+
+![首页 - 亮色模式](docs/screenshots/01-home-light.png)
+
+### 侧边栏分类展开
+
+支持父子级分类切换,定位精准。
+
+![首页 - 侧边栏](docs/screenshots/02-home-sidebar.png)
+
+### 首页导航(暗黑模式)
+
+护眼舒适的暗黑主题,夜间浏览更友好。
+
+![首页 - 暗黑模式](docs/screenshots/03-home-dark.png)
+
+### 用户中心 - 修改密码
+
+显示当前用户身份与权限,提供密码修改入口。
+
+![用户中心 - 修改密码](docs/screenshots/04-user-password.png)
+
+### 后台管理 - 标签管理
+
+对所有书签条目进行集中维护,支持图标、链接、来源备注等字段。
+
+![后台 - 标签管理](docs/screenshots/05-admin-tag.png)
+
+### 后台管理 - 分类管理
+
+管理书签的一级、二级分类结构,支持分页与搜索。
+
+![后台 - 分类管理](docs/screenshots/06-admin-category.png)
+
+### 后台管理 - 用户管理
+
+管理员可对系统用户进行查看、编辑、删除及权限分配。
+
+![后台 - 用户管理](docs/screenshots/07-admin-user.png)
+
+### 书签导入导出
+
+支持上传浏览器导出的 HTML 文件,自动生成卡片;同时支持反向导出。
+
+![书签导入导出](docs/screenshots/08-bookmark-import.png)
+
+---
 
 ## 🚀 技术栈
 
-### 前端框架
-- **Vue 3** - 渐进式JavaScript框架
-- **Vue Router 4** - 官方路由管理器
-- **Pinia** - Vue状态管理库
+### 前端核心
 
-### UI组件库
-- **Element Plus** - Vue 3 UI组件库
-- **Element Plus Icons** - 图标组件库
+| 技术 | 说明 |
+|------|------|
+| **Vue 3** | 渐进式 JavaScript 框架 (Composition API) |
+| **Vue Router 4** | 官方路由管理器 |
+| **Pinia** | 新一代 Vue 状态管理库 |
+| **Pinia Plugin Persistedstate** | Pinia 状态持久化插件 |
 
-### 构建工具
-- **Vite** - 下一代前端构建工具
-- **Vue DevTools** - Vue开发者工具
+### UI 与样式
+
+| 技术 | 说明 |
+|------|------|
+| **Element Plus** | Vue 3 桌面端 UI 组件库 |
+| **Element Plus Icons** | 官方图标组件库 |
+
+### 构建与工程化
+
+| 技术 | 说明 |
+|------|------|
+| **Vite** | 下一代前端构建工具 |
+| **Vue DevTools** | Vue 调试工具 |
+| **unplugin-auto-import** | API 自动导入 |
+| **unplugin-vue-components** | 组件自动注册 |
 
 ### 工具库
-- **Axios** - HTTP客户端
-- **VueUse** - Vue组合式API工具集
-- **Driver.js** - 用户引导库
-- **Pinia Plugin Persistedstate** - Pinia持久化插件
 
-### 开发工具
-- **ESLint** - 代码质量检查工具
-- **Prettier** - 代码格式化工具
-- **unplugin-auto-import** - 自动导入插件
-- **unplugin-vue-components** - 组件自动导入插件
+| 技术 | 说明 |
+|------|------|
+| **Axios** | HTTP 客户端 |
+| **VueUse** | Vue 组合式 API 工具集 |
+| **Driver.js** | 用户操作引导库 |
+
+### 代码规范
+
+| 技术 | 说明 |
+|------|------|
+| **ESLint** | 代码质量检查 |
+| **Prettier** | 代码格式化 |
+
+---
 
 ## 📁 项目结构
 
 ```
 webstack-vue/
-├── public/                 # 静态资源
-│   └── favicon.ico        # 网站图标
-├── src/                   # 源代码
-│   ├── assets/           # 资源文件
-│   │   ├── css/          # 样式文件
-│   │   ├── js/           # JavaScript文件
-│   │   └── logo.svg      # Logo文件
-│   ├── components/       # 公共组件
-│   │   ├── form/         # 表单组件
-│   │   ├── AdminSideBar.vue
-│   │   ├── CardHeader.vue
-│   │   ├── CardVue.vue
-│   │   ├── CommonHeader.vue
-│   │   ├── CommonUpload.vue
-│   │   ├── SideBar.vue
-│   │   └── ToggleDarkButton.vue
-│   ├── router/           # 路由配置
-│   │   └── index.js
-│   ├── stores/           # 状态管理
-│   │   └── user.js
-│   ├── utils/            # 工具函数
-│   │   └── request.js
-│   ├── views/            # 页面组件
-│   │   ├── Admin/        # 管理员页面
-│   │   ├── User/         # 用户页面
-│   │   └── HomeView.vue  # 首页
-│   ├── App.vue           # 根组件
-│   └── main.js           # 入口文件
-├── .env.development      # 开发环境配置
-├── .env.production       # 生产环境配置
-├── .eslintrc.cjs         # ESLint配置
-├── .prettierrc.json      # Prettier配置
-├── .gitignore           # Git忽略文件
-├── index.html           # HTML模板
-├── jsconfig.json        # JavaScript配置
-├── package.json         # 项目依赖
-├── pnpm-lock.yaml       # 锁定文件
-├── vite.config.js       # Vite配置
-└── README.md            # 项目文档
+├── docs/
+│   └── screenshots/         # 项目截图
+├── public/                  # 静态资源
+│   └── favicon.ico
+├── src/
+│   ├── assets/              # 资源文件 (css / js / 图片)
+│   ├── components/          # 公共组件
+│   │   ├── form/            # 表单子组件
+│   │   ├── AdminSideBar.vue # 后台侧边栏
+│   │   ├── CardHeader.vue   # 卡片头部
+│   │   ├── CardVue.vue      # 书签卡片
+│   │   ├── CommonHeader.vue # 公共顶部栏
+│   │   ├── CommonUpload.vue # 通用上传组件
+│   │   ├── SideBar.vue      # 前台侧边栏
+│   │   └── ToggleDarkButton.vue # 主题切换按钮
+│   ├── router/              # 路由配置
+│   ├── stores/              # Pinia 状态
+│   ├── utils/               # 工具函数 (axios 封装等)
+│   ├── views/
+│   │   ├── Admin/           # 管理员页面
+│   │   ├── User/            # 用户页面
+│   │   └── HomeView.vue     # 首页
+│   ├── App.vue              # 根组件
+│   └── main.js              # 入口文件
+├── .env.development         # 开发环境变量
+├── .env.production          # 生产环境变量
+├── .eslintrc.cjs            # ESLint 配置
+├── .prettierrc.json         # Prettier 配置
+├── index.html               # HTML 模板
+├── jsconfig.json            # JS 路径别名
+├── package.json
+├── pnpm-lock.yaml
+├── vite.config.js           # Vite 配置
+└── README.md
 ```
 
-## 🛠️ 安装与使用
+---
+
+## 🛠️ 快速开始
 
 ### 环境要求
 
-- Node.js >= 16.0.0
-- pnpm >= 7.0.0 (推荐) 或 npm >= 8.0.0
+- **Node.js** >= 16.0.0
+- **pnpm** >= 7.0.0 (推荐) 或 **npm** >= 8.0.0
 
-### 安装步骤
+### 安装与运行
 
-1. **克隆项目**
 ```bash
+# 1. 克隆仓库
 git clone https://github.com/zxbdzh/webstack-vue.git
 cd webstack-vue
-```
 
-2. **安装依赖**
-```bash
-# 使用pnpm (推荐)
+# 2. 安装依赖 (推荐 pnpm)
 pnpm install
 
-# 或使用npm
-npm install
+# 3. 启动开发服务器
+pnpm dev
+
+# 4. 构建生产版本
+pnpm build
+
+# 5. 本地预览生产构建
+pnpm preview
 ```
 
-3. **环境配置**
+### 环境配置
 
-修改环境变量文件：
-- `.env.development` - 开发环境配置
-- `.env.production` - 生产环境配置
+修改根目录下的环境变量文件:
 
-主要配置项：
 ```env
-# 开发环境API地址
+# .env.development
 VITE_API_URL=http://localhost:3000/api
 
-# 生产环境API地址
+# .env.production
 VITE_API_URL=https://your-api-domain.com/api
-
-# 基础路径（可选）
 VITE_BASE_API=/
 ```
 
-4. **启动开发服务器**
-```bash
-pnpm dev
-```
+### 后端服务
 
-5. **构建生产版本**
-```bash
-pnpm build
-```
+本项目仅为前端实现,需配合后端 API 服务运行:
 
-6. **预览生产构建**
-```bash
-pnpm preview
-```
+> 🔗 后端仓库:[webstack-backend](https://github.com/zxbdzh/webstack-backend)
 
-### 后端API部署
+请按照后端项目的 README 完成部署与配置。
 
-项目需要配合后端API使用，请自行部署API服务：
-- 后端项目地址：[webstack-backend](https://github.com/zxbdzh/webstack-backend)
-- 按照后端项目的说明进行部署和配置
+---
 
-## 📋 项目相关指令
+## 📋 常用命令
 
-### 开发指令
+| 命令 | 说明 |
+|------|------|
+| `pnpm dev` | 启动开发服务器(热更新) |
+| `pnpm build` | 构建生产版本 |
+| `pnpm preview` | 本地预览生产构建 |
+| `pnpm lint` | ESLint 代码检查并修复 |
+| `pnpm format` | Prettier 格式化代码 |
 
-```bash
-# 启动开发服务器
-pnpm dev
+---
 
-# 构建生产版本
-pnpm build
+## 🚢 部署指南
 
-# 预览生产构建
-pnpm preview
-
-# 代码检查
-pnpm lint
-
-# 代码格式化
-pnpm format
-```
-
-### 部署说明
-
-#### Nginx部署示例
+### Nginx 配置示例
 
 ```nginx
 server {
@@ -181,10 +239,12 @@ server {
     root /path/to/webstack-vue/dist;
     index index.html;
 
+    # SPA 路由 fallback
     location / {
         try_files $uri $uri/ /index.html;
     }
 
+    # API 反向代理
     location /api {
         proxy_pass http://your-backend-api;
         proxy_set_header Host $host;
@@ -195,86 +255,92 @@ server {
 }
 ```
 
-#### OpenResty部署
-
-OpenResty部署方式与Nginx类似，可以直接使用上述配置。
-
-## 🌟 功能特性
-
-### 主要功能
-
-- **🏠 首页导航**：展示分类书签，支持折叠侧边栏
-- **🔍 分类浏览**：按分类浏览书签，支持多级分类
-- **👤 用户系统**：用户注册、登录、个人中心
-- **🛠️ 管理后台**：
-  - 标签管理：增删改查书签标签
-  - 分类管理：管理书签分类结构
-  - 用户管理：管理系统用户
-  - 书签管理：批量管理书签数据
-
-### 界面特性
-
-- **📱 响应式设计**：自适应桌面端和移动端
-- **🌙 暗黑模式**：支持亮色/暗色主题切换
-- **✨ 动画效果**：流畅的页面过渡和交互动画
-- **📖 用户引导**：新用户首次使用的功能介绍
-
-### 技术特性
-
-- **🚀 现代化构建**：基于Vite的快速开发和构建
-- **💾 状态持久化**：用户数据和设置的本地存储
-- **🔧 自动导入**：组件和API的自动导入优化开发体验
-- **✅ 代码规范**：ESLint + Prettier保证代码质量
-
-## 🔧 开发指南
-
-### 添加新功能
-
-1. 在 `src/views/` 中创建新页面组件
-2. 在 `src/router/index.js` 中添加路由配置
-3. 如需状态管理，在 `src/stores/` 中创建store
-4. 在 `src/components/` 中创建可复用组件
-
-### 样式规范
-
-- 使用Element Plus主题系统
-- 遵循BEM命名规范
-- 响应式设计优先
-
-### 代码规范
-
-- 使用ESLint进行代码检查
-- 使用Prettier进行代码格式化
-- 遵循Vue 3 Composition API最佳实践
-
-## 🤝 贡献指南
-
-欢迎提交Issue和Pull Request！
-
-1. Fork 本仓库
-2. 创建你的特性分支 (`git checkout -b feature/AmazingFeature`)
-3. 提交你的修改 (`git commit -m 'Add some AmazingFeature'`)
-4. 推送到分支 (`git push origin feature/AmazingFeature`)
-5. 打开一个Pull Request
-
-## 📄 许可证
-
-本项目采用 MIT 许可证 - 查看 [LICENSE](LICENSE) 文件了解详情
-
-## 🙏 致谢
-
-- [WebStackPage](https://github.com/WebStackPage/WebStackPage.github.io) - 原项目灵感来源
-- [Vue.js](https://vuejs.org/) - 渐进式JavaScript框架
-- [Element Plus](https://element-plus.org/) - Vue 3 UI组件库
-- [Vite](https://vitejs.dev/) - 下一代前端构建工具
-
-## 📞 联系方式
-
-如有问题或建议，请通过以下方式联系：
-
-- 提交 [Issue](https://github.com/zxbdzh/webstack-vue/issues)
-- 发送邮件到：your-email@example.com
+> OpenResty 部署方式与 Nginx 完全兼容,可直接复用上述配置。
 
 ---
 
-⭐ 如果这个项目对你有帮助，请给它一个星标！
+## 🌟 功能详解
+
+### 前台功能
+
+- **🏠 首页导航** —— 卡片式书签陈列,折叠 / 展开侧边栏
+- **🔍 分类浏览** —— 多级分类,层级清晰
+- **🌙 主题切换** —— 亮色 / 暗黑一键切换,自动持久化
+- **👤 个人中心** —— 修改密码、查看权限
+- **📖 新手引导** —— 首次访问自动启动操作引导
+
+### 后台功能(管理员)
+
+| 模块 | 功能 |
+|------|------|
+| **标签管理** | 书签条目的增删改查、批量管理、图标与链接维护 |
+| **分类管理** | 一级 / 二级分类的层级管理 |
+| **用户管理** | 用户列表、权限分配、账号操作 |
+| **书签导入导出** | 支持 Chrome / Edge / Firefox / 360 浏览器的 HTML 书签互导 |
+
+### 浏览器书签导入说明
+
+| 浏览器 | 导出步骤 |
+|--------|----------|
+| **Chrome / 360 极速** | `Ctrl + Shift + O` → 右上角三个点 → 导出书签 → 保存 |
+| **Firefox** | `Ctrl + Shift + B` → 打开"我的足迹" → 选择所有书签 → 导出书签为 HTML |
+| **Microsoft Edge** | 地址栏访问 `edge://favorites/` → 右上角三个点 → 导出收藏夹 |
+
+随后在"书签导入"页面上传得到的 HTML 文件即可。
+
+---
+
+## 🔧 开发指南
+
+### 新增页面
+
+1. 在 `src/views/` 下创建页面组件
+2. 在 `src/router/index.js` 注册路由
+3. 如需状态管理,在 `src/stores/` 创建对应 Pinia store
+4. 公共组件抽离到 `src/components/`
+
+### 编码约定
+
+- 优先使用 **Vue 3 Composition API** (`<script setup>`)
+- 样式遵循 **BEM** 命名规范
+- 优先使用 **Element Plus** 设计令牌,保证主题一致性
+- 提交前执行 `pnpm lint` 与 `pnpm format`
+
+---
+
+## 🤝 贡献指南
+
+欢迎提交 Issue 与 Pull Request!
+
+1. Fork 本仓库
+2. 创建特性分支:`git checkout -b feature/AmazingFeature`
+3. 提交修改:`git commit -m 'feat: add some AmazingFeature'`
+4. 推送分支:`git push origin feature/AmazingFeature`
+5. 提交 Pull Request
+
+---
+
+## 📄 许可证
+
+本项目基于 [MIT License](LICENSE) 开源。
+
+---
+
+## 🙏 致谢
+
+- [WebStackPage](https://github.com/WebStackPage/WebStackPage.github.io) —— 原始项目灵感
+- [Vue.js](https://vuejs.org/) —— 渐进式 JavaScript 框架
+- [Element Plus](https://element-plus.org/) —— Vue 3 UI 组件库
+- [Vite](https://vitejs.dev/) —— 下一代前端构建工具
+- [VueUse](https://vueuse.org/) —— Vue 组合式 API 工具集
+
+---
+
+## 📞 联系方式
+
+- 提交 [Issue](https://github.com/zxbdzh/webstack-vue/issues)
+- GitHub:[@zxbdzh](https://github.com/zxbdzh)
+
+---
+
+⭐ 如果这个项目对你有帮助,欢迎 **Star** 支持一下!
