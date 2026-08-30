@@ -1,15 +1,21 @@
+<div align="center">
+
 # webstack-vue
 
 [English](README.en.md)
 
-> 使用 Vue 3 + Vite 构建的现代化网址导航系统
->
-> 原项目灵感来源:[WebStackPage](https://github.com/WebStackPage/WebStackPage.github.io)
+**使用 Vue 3 + Vite 构建的现代化网址导航系统。** 书签收藏、分类管理、用户体系与完整后台，可用于个人书签云端管理或团队站点导航中心。
 
-[![Vue](https://img.shields.io/badge/Vue-3.x-4FC08D?logo=vue.js&logoColor=white)](https://vuejs.org/)
-[![Vite](https://img.shields.io/badge/Vite-5.x-646CFF?logo=vite&logoColor=white)](https://vitejs.dev/)
-[![Element Plus](https://img.shields.io/badge/Element_Plus-2.x-409EFF?logo=element&logoColor=white)](https://element-plus.org/)
-[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+<sub>// 灵感来源：<a href="https://github.com/WebStackPage/WebStackPage.github.io">WebStackPage</a> · 亮暗主题 · 书签导入导出 · 完整后台</sub>
+
+<br />
+
+![Vue](https://img.shields.io/badge/Vue-3.x-4FC08D?logo=vue.js&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-5.x-646CFF?logo=vite&logoColor=white)
+![Element Plus](https://img.shields.io/badge/Element_Plus-2.x-409EFF?logo=element&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-blue.svg)
+
+</div>
 
 ---
 

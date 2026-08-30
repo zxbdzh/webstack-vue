@@ -1,10 +1,23 @@
+<div align="center">
+
 # webstack-vue
 
-> A modern web navigation / bookmark system built with Vue 3 + Vite
->
-> Inspired by [WebStackPage](https://github.com/WebStackPage/WebStackPage.github.io)
-
 [中文](README.md)
+
+**A modern web navigation / bookmark system built with Vue 3 + Vite.** Bookmark collection, category management, a user system and a full admin console — for personal cloud bookmarks or a team navigation hub.
+
+<sub>// Inspired by <a href="https://github.com/WebStackPage/WebStackPage.github.io">WebStackPage</a> · Light/dark themes · Bookmark import/export · Full admin</sub>
+
+<br />
+
+![Vue](https://img.shields.io/badge/Vue-3.x-4FC08D?logo=vue.js&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-5.x-646CFF?logo=vite&logoColor=white)
+![Element Plus](https://img.shields.io/badge/Element_Plus-2.x-409EFF?logo=element&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-blue.svg)
+
+</div>
+
+---
 
 ## About
 
