@@ -1,5 +1,7 @@
 # webstack-vue
 
+[English](README.en.md)
+
 > 使用 Vue 3 + Vite 构建的现代化网址导航系统
 >
 > 原项目灵感来源:[WebStackPage](https://github.com/WebStackPage/WebStackPage.github.io)
